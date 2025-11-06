@@ -1,0 +1,4 @@
+backEnd/env
+backEnd/db.sqlite3
+backEnd/amazon/__pycache__
+backEnd/media
