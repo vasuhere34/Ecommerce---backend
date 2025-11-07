@@ -60,7 +60,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://vasu-ecommerce.netlify.app",
+    "https://vasu-ecommerce-site.netlify.app",
 ]
 ROOT_URLCONF = 'amazon.urls'
 
