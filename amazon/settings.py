@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8)$rt9mexb2ljz+@=770s%mlc81p4^srfu&9py525ppgf-p^*j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ecommerce-backend-1-lnbe.onrender.com']
+ALLOWED_HOSTS = ['ecommerce-backend-1-lnbe.onrender.com',  "http://localhost:5173",]
 
 
 # Application definition
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     "https://vasu-ecommerce-site.netlify.app",
