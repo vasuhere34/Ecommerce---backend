@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8)$rt9mexb2ljz+@=770s%mlc81p4^srfu&9py525ppgf-p^*j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ecommerce-backend-1-lnbe.onrender.com',  "http://localhost:5173",]
+ALLOWED_HOSTS = ['ecommerce-backend-1-lnbe.onrender.com']
 
 
 # Application definition
@@ -85,12 +85,16 @@ WSGI_APPLICATION = 'amazon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
 
 
 # Password validation
